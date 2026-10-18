@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luckarise Privacy Policy</title>
+<style>
+  :root { --bg: #faf7f2; --fg: #1f2a2e; --sub: #5b6b70; --accent: #2a6b6f; --border: #e3ddd3; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #15191b; --fg: #efe9e0; --sub: #a7b0b3; --accent: #7fc3c6; --border: #2d3538; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.7 -apple-system, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  h2 { font-size: 20px; margin: 36px 0 8px; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+  h3 { font-size: 17px; margin: 24px 0 6px; }
+  p, li { color: var(--fg); }
+  .sub { color: var(--sub); font-size: 14px; }
+  .lang { display: flex; gap: 8px; margin: 12px 0 24px; }
+  .lang a { color: var(--accent); text-decoration: none; border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+  code { font-size: 14px; }
+  hr.sep { border: 0; border-top: 2px solid var(--border); margin: 48px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1 id="en">Luckarise Privacy Policy</h1>
+<p class="sub">Last updated: 2026-10-14 · Package: <code>online.surc.cleanerase</code></p>
+<div class="lang"><a href="#en">English</a><a href="#ja">日本語</a></div>
+
+<p>Luckarise ("the app") is a practice app for noticing a feeling and letting it go with a few short words. It is designed so that <strong>the developer runs no server and never receives what you write</strong>. This page explains what the app stores on your phone, what leaves your phone and when, and the choices you have.</p>
+
+<h2>1. What stays on your phone</h2>
+<ul>
+  <li>Your practice records (times, counts, the mood you chose, an optional short label of what was replaying).</li>
+  <li>Your conversation turns in "Let go" (what you typed and the app's reply), unless the app detected a crisis, in which case the text is not saved.</li>
+  <li>Your settings (language, theme, reminders, breathing pattern, and so on).</li>
+  <li>If you add your own API key: the key itself, stored encrypted with a key held in the Android Keystore.</li>
+</ul>
+<p>All of this is stored only on your device. It is excluded from Android cloud backup and device‑to‑device transfer. You can delete everything from Settings → Data → Delete all records, or by uninstalling the app.</p>
+
+<h2>2. What leaves your phone, and only if you choose it</h2>
+<h3>2.1 Your own AI provider (optional)</h3>
+<p>By default, replies are generated on your phone by automated rules and nothing you type is sent anywhere. If you add an API key in Settings, the app sends the following <strong>directly from your phone to the provider you selected</strong> (for example OpenRouter, Anthropic, OpenAI, or a custom OpenAI‑compatible endpoint you enter):</p>
+<ul>
+  <li>a fixed instruction text for the model,</li>
+  <li>your current message (up to 300 characters) and up to six recent turns of the conversation,</li>
+  <li>the language, whether it is day or night, and the feeling you chose from the wheel.</li>
+</ul>
+<p>Messages that the app's safety check identifies as a crisis are never sent. The developer does not relay, see, or store any of this traffic. How the provider handles your data is governed by that provider's own terms and privacy policy; free models offered by some providers may use inputs for training. You consent to this explicitly in the app before a key can be saved, and you can remove the key at any time.</p>
+
+<h3>2.2 Advertising</h3>
+<p>The free version shows ads through Google AdMob (Google Mobile Ads SDK). The SDK may collect the device's advertising ID and related device information to serve and measure ads. Ads never receive your conversations, records, or API keys. Where required by law, the app asks for your consent through Google's User Messaging Platform before loading ads, and you can change your choice in Settings → Ads → Change ad consent. You can also reset or delete your advertising ID in Android settings. See <a href="https://policies.google.com/technologies/ads">Google's advertising policies</a>.</p>
+<p>Ads are never shown on the helpline screen, during the release words practice, or during breathing.</p>
+
+<h3>2.3 Removing ads (one‑time purchase)</h3>
+<p>You can turn ads off with a one‑time purchase handled by Google Play Billing. The developer receives purchase status from Google Play only to unlock the feature and does not receive your payment details.</p>
+
+<h3>2.4 Helplines</h3>
+<p>The helpline screen shows phone numbers and links bundled in the app. Tapping a number opens your phone's dialer; tapping a link opens your browser. Nothing is sent to the developer.</p>
+
+<h3>2.5 On-device AI (optional, some phones only)</h3>
+<p>On supported phones you can download an on-device model that generates replies entirely on your phone. It sends nothing anywhere, and the developer receives nothing. The model is provided and updated by Android system components on your device.</p>
+
+<h3>2.6 Voice input (optional)</h3>
+<p>The microphone button in "Let go" opens your phone's own speech recognition (usually provided by Google or your device maker) to turn speech into text. The app itself never records audio and has no microphone permission. Depending on your device settings, the speech service may process audio on the device or on its provider's servers under that provider's policy. The recognized text is handled like typed text.</p>
+
+<h2>3. What the app does not do</h2>
+<ul>
+  <li>No account, no sign‑in, no developer server.</li>
+  <li>No analytics, no crash reporting, no tracking SDK other than the advertising SDK described above.</li>
+  <li>No access to contacts, location, microphone, camera, or files.</li>
+</ul>
+
+<h2>4. Permissions</h2>
+<table>
+  <tr><th>Permission</th><th>Why</th></tr>
+  <tr><td>INTERNET</td><td>Sending to the AI provider you chose (only if you add a key), loading ads, and Google Play purchases.</td></tr>
+  <tr><td>POST_NOTIFICATIONS</td><td>Reminders and the random bell, only if you turn them on.</td></tr>
+  <tr><td>VIBRATE</td><td>Haptic feedback during practice, if enabled.</td></tr>
+  <tr><td>RECEIVE_BOOT_COMPLETED</td><td>Re‑scheduling your reminders after a restart.</td></tr>
+  <tr><td>AD_ID and related</td><td>Added by the advertising SDK for ad delivery and measurement.</td></tr>
+</table>
+
+<h2>5. Children</h2>
+<p>The app is intended for people aged 18 and over and is not directed to children.</p>
+
+<h2>6. Not medical advice</h2>
+<p>Luckarise is not a medical device and does not diagnose or treat any condition. If you are in distress, please contact a professional or a helpline.</p>
+
+<h2>7. Changes and contact</h2>
+<p>If this policy changes, the new version will be published at this address with an updated date.</p>
+<p>Sur Communication (general incorporated association)<br>5F, 39-18 Daikan-cho, Higashi-ku, Nagoya, Japan<br>Email: <a href="mailto:info@surc.online">info@surc.online</a></p>
+
+<hr class="sep">
+
+<h1 id="ja">Luckarise プライバシーポリシー</h1>
+<p class="sub">最終更新: 2026-10-14 ・ パッケージ名: <code>online.surc.cleanerase</code></p>
+<div class="lang"><a href="#en">English</a><a href="#ja">日本語</a></div>
+
+<p>Luckarise（以下「本アプリ」）は、気持ちに気づき、短い言葉で手放す練習をするためのアプリです。<strong>開発者はサーバーを持たず、あなたが書いた内容を受け取ることはありません。</strong>このページでは、端末内に保存されるもの、端末の外に出るものとその条件、あなたが選べることを説明します。</p>
+
+<h2>1. 端末内にだけ保存されるもの</h2>
+<ul>
+  <li>実践の記録（時刻、回数、選んだ気分、任意で入力する「何が再生していたか」の短いラベル）。</li>
+  <li>「手放す」での対話（あなたの入力と本アプリの返答）。ただし危機に関する内容と判定された場合、本文は保存しません。</li>
+  <li>設定（言語、テーマ、リマインダー、呼吸のパターンなど）。</li>
+  <li>自分の API キーを追加した場合、そのキー。Android Keystore で保護された鍵により暗号化して保存します。</li>
+</ul>
+<p>これらはすべて端末内にのみ保存され、Android のクラウドバックアップおよび端末間転送の対象外です。設定 → データ → すべての記録を削除、またはアンインストールで消去できます。</p>
+
+<h2>2. 端末の外に出るもの（あなたが選んだ場合のみ）</h2>
+<h3>2.1 自分の AI プロバイダ（任意）</h3>
+<p>標準では、返答は端末内の自動応答で生成され、入力内容はどこにも送信されません。設定で API キーを追加すると、本アプリは次の内容を<strong>端末からあなたが選んだプロバイダ（例: OpenRouter、Anthropic、OpenAI、または入力したカスタムの OpenAI 互換エンドポイント）へ直接</strong>送信します。</p>
+<ul>
+  <li>モデルへの固定の指示文</li>
+  <li>現在の発言（300 文字まで）と直近 6 往復までの対話</li>
+  <li>言語、昼か夜か、感情の輪で選んだ気持ち</li>
+</ul>
+<p>本アプリの安全判定で危機に関する内容と判定された発言は送信しません。開発者はこの通信を中継・閲覧・保存しません。送信先での取り扱いは各プロバイダの規約とプライバシーポリシーに従います。一部プロバイダの無料モデルは入力を学習に使う場合があります。キーを保存する前にアプリ内で明示的に同意いただき、キーはいつでも削除できます。</p>
+
+<h3>2.2 広告</h3>
+<p>無料版では Google AdMob（Google Mobile Ads SDK）による広告を表示します。SDK は広告の配信と計測のために、端末の広告 ID と関連する端末情報を収集することがあります。広告に会話・記録・API キーが渡ることはありません。法令で必要な地域では、広告を読み込む前に Google の User Messaging Platform を通じて同意を求め、設定 → 広告 → 広告の同意を変更、からいつでも変更できます。広告 ID は Android の設定でリセット・削除できます。詳細は <a href="https://policies.google.com/technologies/ads?hl=ja">Google の広告に関するポリシー</a>をご覧ください。</p>
+<p>相談窓口の画面、手放す言葉の最中、呼吸の最中には広告を表示しません。</p>
+
+<h3>2.3 広告をオフにする（買い切り）</h3>
+<p>広告は Google Play 課金による 1 回限りの購入でオフにできます。開発者は機能を有効にするために Google Play から購入状態を受け取るだけで、支払い情報は受け取りません。</p>
+
+<h3>2.4 相談窓口</h3>
+<p>相談窓口の画面には、アプリに同梱した電話番号とリンクを表示します。番号をタップすると電話アプリが、リンクをタップするとブラウザが開きます。開発者には何も送信されません。</p>
+
+<h3>2.5 端末内 AI（任意・一部の端末のみ）</h3>
+<p>対応する端末では、端末内で返答を生成するモデルをダウンロードして使えます。どこにも送信せず、開発者も何も受け取りません。モデルは端末の Android システムコンポーネントが提供・更新します。</p>
+
+<h3>2.6 音声入力（任意）</h3>
+<p>「手放す」のマイクボタンは、端末標準の音声認識（通常は Google または端末メーカーが提供）を開いて音声を文字にします。本アプリ自体は録音せず、マイクの権限も持ちません。端末の設定によっては、音声認識サービスが端末内またはその提供元のサーバーで処理することがあり、提供元のポリシーに従います。認識された文字は、入力した文字と同じ扱いです。</p>
+
+<h2>3. 本アプリが行わないこと</h2>
+<ul>
+  <li>アカウント登録・ログイン・開発者のサーバーはありません。</li>
+  <li>アクセス解析、クラッシュレポート、上記の広告 SDK 以外のトラッキング SDK は使用しません。</li>
+  <li>連絡先、位置情報、マイク、カメラ、ファイルにはアクセスしません。</li>
+</ul>
+
+<h2>4. 権限</h2>
+<table>
+  <tr><th>権限</th><th>目的</th></tr>
+  <tr><td>INTERNET</td><td>選んだ AI プロバイダへの送信（キーを追加した場合のみ）、広告の読み込み、Google Play の購入。</td></tr>
+  <tr><td>POST_NOTIFICATIONS</td><td>リマインダーとランダム・ベル（オンにした場合のみ）。</td></tr>
+  <tr><td>VIBRATE</td><td>実践中の触覚フィードバック（オンの場合）。</td></tr>
+  <tr><td>RECEIVE_BOOT_COMPLETED</td><td>再起動後のリマインダーの再予約。</td></tr>
+  <tr><td>AD_ID ほか</td><td>広告 SDK が広告の配信と計測のために追加する権限。</td></tr>
+</table>
+
+<h2>5. 子どもの利用</h2>
+<p>本アプリは 18 歳以上を対象とし、子ども向けではありません。</p>
+
+<h2>6. 医療に関する注意</h2>
+<p>本アプリは医療機器ではなく、診断や治療を目的としたものではありません。つらいときは専門家や相談窓口にご相談ください。</p>
+
+<h2>7. 変更と連絡先</h2>
+<p>本ポリシーを変更する場合は、このページで更新日とともに公開します。</p>
+<p>一般社団法人サーコミュニケーション<br>名古屋市東区代官町39-18 5階<br>メール: <a href="mailto:info@surc.online">info@surc.online</a></p>
+</main>
+</body>
+</html>
